@@ -18,6 +18,11 @@ namespace Gomoku
         private Point lastPlacedNode = NO_MATCH_NODE;
         public Point LastPlaceNode { get { return lastPlacedNode;  } }
 
+        //清除存放棋盤上棋子位置的二維陣列
+        static void PiecesClear()
+        {
+            Array.Clear(pieces, 0, pieces.Length);   
+        }
         public PieceType GetPieceType(int nodeIdX, int nodeIdY)
         {
             if (pieces[nodeIdX, nodeIdY] == null)
